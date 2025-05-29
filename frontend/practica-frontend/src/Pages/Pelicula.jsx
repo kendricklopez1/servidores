@@ -31,7 +31,7 @@ const Peliculas = ({ refreshMovies }) => {
     }
 
     try {
-      await axios.post('http://localhost:4000/api/PeliRoutes', formData, {
+      await axios.post('https://mern-2-a-kendricks-projects-e8736933.vercel.app/api/PeliRoutes', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setMovie({

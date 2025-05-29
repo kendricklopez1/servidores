@@ -17,7 +17,7 @@ const List = () => {
 
   const fetchMovies = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/PeliRoutes');
+      const response = await axios.get('https://mern-2-a-kendricks-projects-e8736933.vercel.app/api/PeliRoutes');
       setMovies(response.data);
     } catch (error) {
       console.error('Error al obtener la películas:', error);

@@ -11,7 +11,7 @@ app.use(cookieParser());
 
 app.use(
     cors({
-      origin: "https://mern-2-a-kendricks-projects-e8736933.vercel.app/", 
+      origin: "https://mern-2-a-kendricks-projects-e8736933.vercel.app", 
       credentials: true, 
     })
   );

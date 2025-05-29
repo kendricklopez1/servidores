@@ -18,7 +18,7 @@ const ListClientes = () => {
 
   const fetchClientes = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/ClienteRoutes');
+      const response = await axios.get('https://mern-2-a-kendricks-projects-e8736933.vercel.app/api/ClienteRoutes');
       setClientes(response.data);
     } catch (error) {
       console.error('Error al obtener los clientes:', error);
