@@ -84,7 +84,7 @@ const ListEmpleado = () => {
 
     if (formData) {
       try {
-        await axios.put(`http://localhost:4000/api/empleado/${empleado._id}`, formData);
+        await axios.put(`https://servidores.onrender.com/api/empleadoRoutes/${empleado._id}`, formData);
         Swal.fire('Actualizado', 'El empleado se ha actualizado con éxito', 'success');
         fetchEmpleados();
       } catch (error) {
@@ -97,7 +97,7 @@ const ListEmpleado = () => {
   const handleDelete = async (empleadoId) => {
     if (window.confirm('¿Estás seguro de que quieres eliminar este empleado?')) {
       try {
-        await axios.delete(`http://localhost:4000/api/empleado/${empleadoId}`);
+        await axios.delete(`https://servidores.onrender.com/api/empleadoRoutes/${empleadoId}`);
         setEmpleado(empleados.filter((e) => e._id !== empleadoId));
       } catch (error) {
         console.error('Error al eliminar el empleado:', error);

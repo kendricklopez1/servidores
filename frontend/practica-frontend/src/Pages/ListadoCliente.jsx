@@ -72,7 +72,7 @@ const ListClientes = () => {
 
     if (formData) {
       try {
-        await axios.put(`http://localhost:4000/api/cliente/${cliente._id}`, formData);
+        await axios.put(`https://servidores.onrender.com/api/ClienteRoutes/${cliente._id}`, formData);
         Swal.fire('Actualizado', 'Su cliente se ha actualizado con éxito', 'success');
         fetchClientes();
       } catch (error) {
@@ -85,7 +85,7 @@ const ListClientes = () => {
   const handleDelete = async (clienteId) => {
     if (window.confirm('¿Estás seguro de que quieres eliminar este cliente?')) {
       try {
-        await axios.delete(`http://localhost:4000/api/cliente/${clienteId}`);
+        await axios.delete(`https://servidores.onrender.com/api/ClienteRoutes/${clienteId}`);
         setClientes(clientes.filter((c) => c._id !== clienteId));
       } catch (error) {
         console.error('Error al eliminar el cliente:', error);
