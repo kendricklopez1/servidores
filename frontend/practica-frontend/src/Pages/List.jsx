@@ -127,7 +127,7 @@ const List = () => {
           data.append('img', imageFile);
         }
 
-        await axios.put(`http://localhost:4000/api/pelicula/${movie._id}`, data, {
+        await axios.put(`https://servidores.onrender.com/api/PeliRoutes/${movie._id}`, data, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
 
@@ -143,7 +143,7 @@ const List = () => {
   const handleDelete = async (movieId) => {
     if (window.confirm('¿Estás seguro de que quieres eliminar la pelicula?')) {
       try {
-        await axios.delete(`http://localhost:4000/api/pelicula/${movieId}`);
+        await axios.delete(`https://servidores.onrender.com/api/PeliRoutes/${movieId}`);
         setMovies(movies.filter((movie) => movie._id !== movieId));
       } catch (error) {
         console.error('Error al eliminar la película:', error);
