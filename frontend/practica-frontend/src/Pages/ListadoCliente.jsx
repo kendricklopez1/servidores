@@ -18,7 +18,7 @@ const ListClientes = () => {
 
   const fetchClientes = async () => {
     try {
-      const response = await axios.get('https://mern-2-a-mxxm.vercel.app/api/ClienteRoutes');
+      const response = await axios.get('https://servidores.onrender.com/api/ClienteRoutes');
       setClientes(response.data);
     } catch (error) {
       console.error('Error al obtener los clientes:', error);

@@ -17,7 +17,7 @@ const Clientes = () => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      await axios.post('https://mern-2-a-mxxm.vercel.app/api/ClienteRoutes', cliente, {
+      await axios.post('https://servidores.onrender.com/api/ClienteRoutes', cliente, {
         headers: { 'Content-Type': 'application/json' },
       });
       setCliente({

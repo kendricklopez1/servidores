@@ -18,7 +18,7 @@ const ListEmpleado = () => {
 
   const fetchEmpleados = async () => {
     try {
-      const response = await axios.get('https://mern-2-a-mxxm.vercel.app/api/empleadoRoutes');
+      const response = await axios.get('https://servidores.onrender.com/api/empleadoRoutes');
       setEmpleado(response.data);
     } catch (error) {
       console.error('Error al obtener los empleados:', error);

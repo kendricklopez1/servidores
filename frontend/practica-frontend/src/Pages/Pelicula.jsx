@@ -31,7 +31,7 @@ const Peliculas = ({ refreshMovies }) => {
     }
 
     try {
-      await axios.post('https://mern-2-a-mxxm.vercel.app/api/PeliRoutes', formData, {
+      await axios.post('https://servidores.onrender.com/api/PeliRoutes', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setMovie({
